@@ -1,3 +1,6 @@
+# server Username and password
+.default.json
+
 # Logs
 logs
 *.log
