@@ -3,21 +3,21 @@ const { restart } = require('nodemon');
 const router = express.Router();
 
 // import Schema
-const userC = require('../controllers/userC')
+const ticketC = require('../controllers/ticketController');
 
 // Methods
 /* --> POST Method <-- */
-router.post('/user',userC.create);
+router.post('/',ticketC.create);
 
 /* --> GET Method <-- */
-router.get('/user',userC.getAll);
+router.get('/',ticketC.getAll);
 
-router.get('/user/:id',userC.get);
+router.get('/:id',ticketC.get);
 
 /* --> PATCH Method <-- */
-router.patch('/user/:id',userC.update);
+router.patch('/:id',ticketC.update);
 
 /* --> DELETE Method <-- */
-router.delete('/user/:id',userC.remove);
+router.delete('/:id',ticketC.remove);
 
 module.exports = router;

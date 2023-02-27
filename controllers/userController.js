@@ -2,7 +2,7 @@
 // const userController = require('../services')
 
 // import Schema
-const Model = require('../models/userM');
+const Model = require('../models/userModel');
 
 // POST   
 async function create(req, res) {
@@ -67,7 +67,7 @@ async function remove(req, res) {
     try{
         const id = req.params.id;
         const data = await Model.findByIdAndDelete(id);
-        res.send(`Document --> ${data.name} <-- has been deleted...`);
+        res.send(`Document --> ${data.email} <-- has been deleted...`);
     }
     catch (error) {
         res.status(400).json({ message: error.message });

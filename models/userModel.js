@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const userSchema = new mongoose.Schema({
     email: {
-        type: String,
+        type: String
     },
     password: { 
         type: String
@@ -15,4 +15,4 @@ const userSchema = new mongoose.Schema({
     }
 });
 
-module.exports = mongoose.model('Data', userSchema);
+module.exports = mongoose.model('UserData', userSchema);
